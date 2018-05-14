@@ -1,5 +1,7 @@
 package com.elyssiamc.Micc.JavaMee6APIWrapper;
 
+import java.io.IOException;
+
 import com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.Guild;
 import com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.MeeResponse;
 import com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.Players;
@@ -15,7 +17,7 @@ public class Mee6API {
 		this.serverid = serverid;
 		mee = new SimpleAPICache(
 			"https://api.mee6.xyz/plugins/levels/leaderboard/" +
-			serverid, 1000, 30000);
+			serverid, 1000, 300000);
 	}
 	
 	public String getServerId() {
@@ -23,26 +25,34 @@ public class Mee6API {
 	}
 	
 	public Guild getGuild() {
-		return getAbstractResponse().getGuild();
+		MeeResponse response = getAbstractResponse();
+		return response != null ? response.getGuild() : null;
 	}
 	
 	public Role_rewards[] getRewards() {
-		return getAbstractResponse().getRole_rewards();
+		MeeResponse response = getAbstractResponse();
+		return response != null ? response.getRole_rewards() : null;
 	}
 	
 	public MeeResponse getAbstractResponse() {
-		return mee.getJson();
+		try {
+			return mee.getJson();
+		} catch (IOException e) {}
+		return null;
 	}
 	
 	public Players[] getPlayers() {
-		return getAbstractResponse().getPlayers();
+		MeeResponse response = getAbstractResponse();
+		return response != null ? response.getPlayers() : null;
 	}
 	
 	public Players getPlayer(String discordid) {
 		Players[] meePlayers = getPlayers();
-		for(Players player : meePlayers) {
-			if (player.getId().equals(discordid)) {
-				return player;
+		if (meePlayers != null) {
+			for(Players player : meePlayers) {
+				if (player.getId().equals(discordid)) {
+					return player;
+				}
 			}
 		}
 		return null;
