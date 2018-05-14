@@ -3,7 +3,7 @@ public class MeeResponse
 {
     private Role_rewards[] role_rewards;
 
-    private String page;
+    private int page;
 
     private Players[] players;
 
@@ -19,12 +19,12 @@ public class MeeResponse
         this.role_rewards = role_rewards;
     }
 
-    public String getPage ()
+    public int getPage ()
     {
         return page;
     }
 
-    public void setPage (String page)
+    public void setPage (int page)
     {
         this.page = page;
     }

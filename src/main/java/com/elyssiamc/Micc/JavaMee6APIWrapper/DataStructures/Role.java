@@ -1,28 +1,28 @@
 package com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures;
 public class Role
 {
-    private String position;
+    private int position;
 
     private String id;
 
-    private String managed;
+    private boolean managed;
 
-    private String color;
+    private long color;
 
     private String name;
 
-    private String hoist;
+    private boolean hoist;
 
-    private String permissions;
+    private long permissions;
 
-    private String mentionable;
+    private boolean mentionable;
 
-    public String getPosition ()
+    public int getPosition ()
     {
         return position;
     }
 
-    public void setPosition (String position)
+    public void setPosition (int position)
     {
         this.position = position;
     }
@@ -37,22 +37,22 @@ public class Role
         this.id = id;
     }
 
-    public String getManaged ()
+    public boolean getManaged ()
     {
         return managed;
     }
 
-    public void setManaged (String managed)
+    public void setManaged (boolean managed)
     {
         this.managed = managed;
     }
 
-    public String getColor ()
+    public long getColor ()
     {
         return color;
     }
 
-    public void setColor (String color)
+    public void setColor (long color)
     {
         this.color = color;
     }
@@ -67,32 +67,32 @@ public class Role
         this.name = name;
     }
 
-    public String getHoist ()
+    public boolean getHoist ()
     {
         return hoist;
     }
 
-    public void setHoist (String hoist)
+    public void setHoist (boolean hoist)
     {
         this.hoist = hoist;
     }
 
-    public String getPermissions ()
+    public long getPermissions ()
     {
         return permissions;
     }
 
-    public void setPermissions (String permissions)
+    public void setPermissions (long permissions)
     {
         this.permissions = permissions;
     }
 
-    public String getMentionable ()
+    public boolean getMentionable ()
     {
         return mentionable;
     }
 
-    public void setMentionable (String mentionable)
+    public void setMentionable (boolean mentionable)
     {
         this.mentionable = mentionable;
     }
