@@ -16,21 +16,14 @@ public class Example
 {
     public static void main(String[] args)
     {
-    	  //Note you must build a corresponding JDA with the Server's ID
+    	//Note you must build a corresponding JDA with the Server's ID
         Mee6API mee = new Mee6API("222123744959660032");
         
-        //Grab a player by ID
+        //Grab a player by ID (will output null if Mee6API is not operational)
         Players player = mee.getPlayer("157692073699573761");
         
         //An output of their level
-        System.out.println(player.getLevel());
-    }
-
-    @Override
-    public void onEvent(Event event)
-    {
-        if (event instanceof ReadyEvent)
-            System.out.println("API is ready!");
+        System.out.println(player != null ? player.getLevel() ? "MEE6 API has no record of this member");
     }
 }
 ```
