@@ -8,7 +8,7 @@ through a user-friendly dashboard. A little known fact is that it has an API whi
 
 While building a bot with JDA around Mee6 player statistics, I found that there was no public wrappers for Mee6, so I built one. I thought I would share this with the community in case someone else needed it. :D
 
-![Jason](http://i.imgur.com/sXXQy61.png)
+![Jason](https://i.gyazo.com/53d14bf4550f2efd4f835f3bd4563292.png)
 
 **Using Mee6API Object**:
 ```java
@@ -16,7 +16,7 @@ public class Example
 {
     public static void main(String[] args)
     {
-    	  //Note u must build a corresponding JDA with the Server's ID
+    	  //Note you must build a corresponding JDA with the Server's ID
         Mee6API mee = new Mee6API("222123744959660032");
         
         //Grab a player by ID
