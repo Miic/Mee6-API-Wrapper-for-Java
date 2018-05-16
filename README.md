@@ -8,6 +8,8 @@ through a user-friendly dashboard, but it is a little known fact is that MEE6 ha
 
 While building a bot with JDA around Mee6 player statistics, I found that there was no public wrappers for Mee6, so I built one. I thought I would share this with the community in case someone else needed it.
 
+At the moment, we are only allowed to GET data from the API and not POST to update a specific value.
+
 ![Jason](https://i.gyazo.com/53d14bf4550f2efd4f835f3bd4563292.png)
 
 **Using Mee6API Object**:
