@@ -25,7 +25,7 @@ public class Example
         Players player = mee.getPlayer("157692073699573761");
         
         //An output of their level
-        System.out.println(player != null ? player.getLevel() ? "MEE6 API has no record of this member");
+        System.out.println(player != null ? player.getLevel() : "MEE6 API has no record of this member");
     }
 }
 ```
