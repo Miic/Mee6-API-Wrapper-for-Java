@@ -16,7 +16,7 @@ public class Mee6API {
 	public Mee6API(String serverid) {
 		this.serverid = serverid;
 		mee = new SimpleAPICache(
-			"https://api.mee6.xyz/plugins/levels/leaderboard/" +
+			"https://mee6.xyz/api/plugins/levels/leaderboard/" +
 			serverid, 1000, 300000);
 	}
 	
