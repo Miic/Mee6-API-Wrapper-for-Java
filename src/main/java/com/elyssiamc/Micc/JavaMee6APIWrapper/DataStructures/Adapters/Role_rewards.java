@@ -17,26 +17,44 @@ specific language governing permissions and limitations
 under the License.
 */
 
-package com.elyssiamc.Micc.JavaMee6APIWrapper;
+package com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.Adapters;
 
-import com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.Adapters.Players;
-
-public class Example 
+/**
+ * Auto-generated code used to translate Guild a JSON Response to a Java object
+ * 
+ * @author Micc
+ *
+ */
+public class Role_rewards
 {
-    public static void main( String[] args )
+    private int rank;
+
+    private Role role;
+
+    public int getRank ()
     {
-    	//A guild's id
-        Mee6API mee = new Mee6API("222123744959660032");
-        
-        //A player's id
-        Players player = mee.getPlayer("157692073699573761");
-        
-        //An output of their level
-        StringBuffer sb = new StringBuffer()
-        		.append(player.getUsername())
-        		.append(" : ")
-        		.append(player.getLevel());
-        
-        System.out.println(sb.toString());
+        return rank;
+    }
+
+    public void setRank (int rank)
+    {
+        this.rank = rank;
+    }
+
+    public Role getRole ()
+    {
+        return role;
+    }
+
+    public void setRole (Role role)
+    {
+        this.role = role;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "ClassPojo [rank = "+rank+", role = "+role+"]";
     }
 }
+	

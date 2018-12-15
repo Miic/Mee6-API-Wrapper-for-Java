@@ -1,23 +1,43 @@
+/* 
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+*/
+
 package com.elyssiamc.Micc.JavaMee6APIWrapper;
 
 import java.io.IOException;
 
-import com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.Guild;
-import com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.MeeResponse;
-import com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.Players;
-import com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.Role_rewards;
-import com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.SimpleAPICache;
+import com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.M6CacheManager;
+import com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.Adapters.Guild;
+import com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.Adapters.MeeResponse;
+import com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.Adapters.Players;
+import com.elyssiamc.Micc.JavaMee6APIWrapper.DataStructures.Adapters.Role_rewards;
 
 public class Mee6API {
 	private String serverid;
-	private SimpleAPICache mee;
+	private M6CacheManager mee;
 	private static final int[] xpList = getXPForLvls(200);
+	
+	private static final String URL = "https://mee6.xyz/api/plugins/levels/leaderboard/";
 	
 	public Mee6API(String serverid) {
 		this.serverid = serverid;
-		mee = new SimpleAPICache(
-			"https://mee6.xyz/api/plugins/levels/leaderboard/" +
-			serverid, 1000, 300000);
+		mee = new M6CacheManager(
+			URL + serverid, 999, 300000);
 	}
 	
 	public String getServerId() {
@@ -26,12 +46,12 @@ public class Mee6API {
 	
 	public Guild getGuild() {
 		MeeResponse response = getAbstractResponse();
-		return response != null ? response.getGuild() : null;
+		return response.getGuild();
 	}
 	
 	public Role_rewards[] getRewards() {
 		MeeResponse response = getAbstractResponse();
-		return response != null ? response.getRole_rewards() : null;
+		return response.getRole_rewards();
 	}
 	
 	public MeeResponse getAbstractResponse() {
@@ -42,8 +62,7 @@ public class Mee6API {
 	}
 	
 	public Players[] getPlayers() {
-		MeeResponse response = getAbstractResponse();
-		return response != null ? response.getPlayers() : null;
+		return getAbstractResponse().getPlayers();
 	}
 	
 	public Players getPlayer(String discordid) {
