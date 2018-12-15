@@ -60,7 +60,8 @@ All returned objects are immutable. This API only allows for querying and not fo
 
 ## Download
 Latest Stable Version: [GitHub Release](https://github.com/Miic/Mee6-API-Wrapper-for-Java/releases/latest)
-Latest Version: Latest[download]
+
+Latest Version: [download]
 
 Be sure to replace the **VERSION** key below with the one of the versions shown above!
 
