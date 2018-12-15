@@ -32,9 +32,11 @@ public class Example
 ## Frequently Asked Questions and Issues
 
 **How do I find a Guild ID / Player ID?**
+
 Step 1: Enable developer mode on your Discord Client. You can find this option in User Settings >  Apperance > Advanced > Developer Mode.
 Step 2: Right click any Guild or Player and click Copy ID
 Step 3: Profit
 
 **I'm making modifications to the data in my program but the changes aren't being reflected on the server. Help?**
+
 All returned objects are immutable. This API only allows for querying and not for sending data back to Mee6
