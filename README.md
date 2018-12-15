@@ -36,6 +36,7 @@ Micc : 21
 //Note: the level may change by the time you attempt to use this
 ```
 
+
 ## Frequently Asked Questions and Issues
 
 **How do I find a Guild ID / Player ID?**
@@ -52,4 +53,28 @@ Step 3: Profit
 
 ```
 All returned objects are immutable. This API only allows for querying and not for sending data back to Mee6.
+```
+
+
+## Download
+Latest Stable Version: [GitHub Release](https://github.com/Miic/Mee6-API-Wrapper-for-Java/releases/latest)
+Latest Version:
+[ ![version][] ][download]
+
+Be sure to replace the **VERSION** key below with the one of the versions shown above!
+
+**Maven**
+```xml
+<dependency>
+    <groupId>com.github.Miic</groupId>
+    <artifactId>Mee6-API-Wrapper-for-Java</artifactId>
+    <version>LATEST</version>
+</dependency>
+```
+```xml
+<repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+</repository>
+
 ```
