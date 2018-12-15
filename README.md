@@ -1,6 +1,4 @@
-[version]: https://api.bintray.com/packages/Mee6-API-Wrapper-for-Java/releases/images/download.svg
 [download]: https://github.com/Miic/Mee6-API-Wrapper-for-Java/releases/latest
-[ ![version][] ][download]
 
 # MEE6 API Wrapper for Java
 
@@ -62,8 +60,7 @@ All returned objects are immutable. This API only allows for querying and not fo
 
 ## Download
 Latest Stable Version: [GitHub Release](https://github.com/Miic/Mee6-API-Wrapper-for-Java/releases/latest)
-Latest Version:
-[ ![version][] ][download]
+Latest Version: Latest[download]
 
 Be sure to replace the **VERSION** key below with the one of the versions shown above!
 
