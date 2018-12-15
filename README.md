@@ -63,8 +63,6 @@ Latest Stable Version: [GitHub Release](https://github.com/Miic/Mee6-API-Wrapper
 
 Latest Version: [download]
 
-Be sure to replace the **VERSION** key below with the one of the versions shown above!
-
 **Maven**
 ```xml
 <dependency>
