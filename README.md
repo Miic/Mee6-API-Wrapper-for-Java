@@ -29,6 +29,13 @@ public class Example
     }
 }
 ```
+
+**Output**
+```
+Micc : 21
+//Note: the level may change by the time you attempt to use this
+```
+
 ## Frequently Asked Questions and Issues
 
 **How do I find a Guild ID / Player ID?**
