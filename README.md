@@ -1,5 +1,5 @@
-[version]: https://api.bintray.com/packages/dv8fromtheworld/maven/JDA/images/download.svg
-[download]: https://bintray.com/dv8fromtheworld/maven/JDA/_latestVersion
+[version]: https://api.bintray.com/packages/Mee6-API-Wrapper-for-Java/releases/images/download.svg
+[download]: https://github.com/Miic/Mee6-API-Wrapper-for-Java/releases/latest
 [ ![version][] ][download]
 
 # MEE6 API Wrapper for Java
