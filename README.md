@@ -1,3 +1,7 @@
+[version]: https://api.bintray.com/packages/dv8fromtheworld/maven/JDA/images/download.svg
+[download]: https://bintray.com/dv8fromtheworld/maven/JDA/_latestVersion
+[ ![version][] ][download]
+
 # MEE6 API Wrapper for Java
 
 Java 8 API Wrapper for the MEE6 Discord Bot
