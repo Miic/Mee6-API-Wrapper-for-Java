@@ -26,7 +26,7 @@ public class Example
         //Grab a player by ID (will output null if player does not exist in this leaderboard)
         Players player = mee.getPlayer("157692073699573761");
         
-        //An example of manipulating this data
+        //An example of displaying this data
         System.out.println(player.getUsername() + " : " + player.getLevel());
     }
 }
